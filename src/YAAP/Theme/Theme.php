@@ -143,9 +143,9 @@ class Theme
 
         if (!$this->theme) throw new ThemeException('Theme should be init first');
 
-        $full_path = $this->_assetFullpath($path);
+     
 
-        $asset = $this->app['url']->asset($full_path, $secure);
+        $asset = $path;
 
         if ($version) {
 
