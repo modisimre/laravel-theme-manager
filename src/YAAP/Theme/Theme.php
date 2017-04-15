@@ -145,7 +145,8 @@ class Theme
 
      
 
-        $asset = $path;
+        $assets_path = trim($this->app['config']->get('theme.assets_path', 'assets/themes'), '/');
+        $asset = $assets_path . '/' . $this->theme . '/' . $path;
 
         if ($version) {
 
